@@ -36,26 +36,26 @@ public class Utils {
 
     public static void showAlgorithmResult(InputInfo inputInfo) {
         System.out.println("------------------------------------------------");
-        System.out.println(inputInfo.getMessage());
+        System.out.println(inputInfo.getMessage() + "\n");
         System.out.println("Entradas:");
         System.out.println("Array aleatório:");
         show(inputInfo.getRandomArray());
         System.out.println("-");
-        System.out.println("Array decrescente:");
-        show(inputInfo.getDescArray());
-        System.out.println("-");
         System.out.println("Array crescente:");
         show(inputInfo.getAscArray());
+        System.out.println("-");
+        System.out.println("Array decrescente:");
+        show(inputInfo.getDescArray());
         System.out.println("--------");
         System.out.println("Saídas:");
         System.out.println("Array aleatório:");
         inputInfo.getCallable().call(inputInfo.getRandomArray());
         System.out.println("-");
-        System.out.println("Array decrescente:");
-        inputInfo.getCallable().call(inputInfo.getDescArray());
-        System.out.println("-");
         System.out.println("Array crescente:");
         inputInfo.getCallable().call(inputInfo.getAscArray());
+        System.out.println("-");
+        System.out.println("Array decrescente:");
+        inputInfo.getCallable().call(inputInfo.getDescArray());
         System.out.println("------------------------------------------------");
     }
 
