@@ -2,7 +2,7 @@ package com.hpedrorodrigues.sort.pojo;
 
 import com.hpedrorodrigues.sort.listener.Callable;
 
-public class InputInfo {
+public class AlgorithmInfo {
 
     private String message;
     private Callable<int[]> callable;
@@ -15,7 +15,7 @@ public class InputInfo {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setName(String message) {
         this.message = message;
     }
 

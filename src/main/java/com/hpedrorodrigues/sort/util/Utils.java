@@ -1,6 +1,6 @@
 package com.hpedrorodrigues.sort.util;
 
-import com.hpedrorodrigues.sort.pojo.InputInfo;
+import com.hpedrorodrigues.sort.pojo.AlgorithmInfo;
 
 public class Utils {
 
@@ -34,28 +34,28 @@ public class Utils {
         System.out.println("5 -> Shell Sort");
     }
 
-    public static void showAlgorithmResult(InputInfo inputInfo) {
+    public static void showAlgorithmResult(AlgorithmInfo algorithmInfo) {
         System.out.println("------------------------------------------------");
-        System.out.println(inputInfo.getMessage() + "\n");
+        System.out.println(algorithmInfo.getMessage() + "\n");
         System.out.println("Entradas:");
         System.out.println("Array aleatório:");
-        show(inputInfo.getRandomArray());
+        show(algorithmInfo.getRandomArray());
         System.out.println("-");
         System.out.println("Array crescente:");
-        show(inputInfo.getAscArray());
+        show(algorithmInfo.getAscArray());
         System.out.println("-");
         System.out.println("Array decrescente:");
-        show(inputInfo.getDescArray());
+        show(algorithmInfo.getDescArray());
         System.out.println("--------");
         System.out.println("Saídas:");
         System.out.println("Array aleatório:");
-        inputInfo.getCallable().call(inputInfo.getRandomArray());
+        algorithmInfo.getCallable().call(algorithmInfo.getRandomArray());
         System.out.println("-");
         System.out.println("Array crescente:");
-        inputInfo.getCallable().call(inputInfo.getAscArray());
+        algorithmInfo.getCallable().call(algorithmInfo.getAscArray());
         System.out.println("-");
         System.out.println("Array decrescente:");
-        inputInfo.getCallable().call(inputInfo.getDescArray());
+        algorithmInfo.getCallable().call(algorithmInfo.getDescArray());
         System.out.println("------------------------------------------------");
     }
 

@@ -52,7 +52,7 @@ public class Algorithms {
         int n = workArray.length;
 
         long startTime = Utils.now();
-        for (int i = 1; i < n - 1; i++) {
+        for (int i = 1; i < n; i++) {
             int j = i - 1;
             while (j >= 0 && workArray[j] > workArray[j + 1]) {
                 int aux = workArray[j];

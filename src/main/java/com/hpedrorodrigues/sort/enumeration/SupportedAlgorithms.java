@@ -1,6 +1,6 @@
 package com.hpedrorodrigues.sort.enumeration;
 
-public enum AlgorithmsSort {
+public enum SupportedAlgorithms {
     SELECTION_SORT(1),
     INSERTION_SORT(2),
     BUBBLE_SORT(3),
@@ -10,12 +10,12 @@ public enum AlgorithmsSort {
 
     private int value;
 
-    AlgorithmsSort(int value) {
+    SupportedAlgorithms(int value) {
         this.value = value;
     }
 
-    public static AlgorithmsSort find(int value) {
-        for (AlgorithmsSort algorithm : AlgorithmsSort.values()) {
+    public static SupportedAlgorithms find(int value) {
+        for (SupportedAlgorithms algorithm : SupportedAlgorithms.values()) {
             if (algorithm.value == value) {
                 return algorithm;
             }

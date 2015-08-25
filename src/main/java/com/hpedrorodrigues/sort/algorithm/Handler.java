@@ -1,7 +1,7 @@
 package com.hpedrorodrigues.sort.algorithm;
 
-import com.hpedrorodrigues.sort.enumeration.AlgorithmsSort;
-import com.hpedrorodrigues.sort.pojo.InputInfo;
+import com.hpedrorodrigues.sort.enumeration.SupportedAlgorithms;
+import com.hpedrorodrigues.sort.pojo.AlgorithmInfo;
 import com.hpedrorodrigues.sort.util.Utils;
 
 import java.util.Scanner;
@@ -21,43 +21,43 @@ public class Handler {
         int descArray[] = Generator.desc(n);
         int randomArray[] = Generator.random(n);
 
-        InputInfo inputInfo = new InputInfo();
-        inputInfo.setRandomArray(randomArray);
-        inputInfo.setDescArray(descArray);
-        inputInfo.setAscArray(ascArray);
+        AlgorithmInfo algorithmInfo = new AlgorithmInfo();
+        algorithmInfo.setRandomArray(randomArray);
+        algorithmInfo.setDescArray(descArray);
+        algorithmInfo.setAscArray(ascArray);
 
         Utils.showMenu();
         int option = scan.nextInt();
 
         while (option != EXIT_SUCCESS) {
 
-            AlgorithmsSort algorithm = AlgorithmsSort.find(option);
+            SupportedAlgorithms algorithm = SupportedAlgorithms.find(option);
 
             switch (algorithm) {
                 case SELECTION_SORT:
-                    inputInfo.setMessage("Selection sort");
-                    inputInfo.setCallable(Algorithms::selectionSort);
-                    Utils.showAlgorithmResult(inputInfo);
-                    break;
+                    algorithmInfo.setName("Selection sort");
+                algorithmInfo.setCallable(Algorithms::selectionSort);
+                Utils.showAlgorithmResult(algorithmInfo);
+                break;
                 case INSERTION_SORT:
-                    inputInfo.setMessage("Insertion sort");
-                    inputInfo.setCallable(Algorithms::insertionSort);
-                    Utils.showAlgorithmResult(inputInfo);
+                    algorithmInfo.setName("Insertion sort");
+                    algorithmInfo.setCallable(Algorithms::insertionSort);
+                    Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case BUBBLE_SORT:
-                    inputInfo.setMessage("Bubble sort");
-                    inputInfo.setCallable(Algorithms::bubbleSort);
-                    Utils.showAlgorithmResult(inputInfo);
+                    algorithmInfo.setName("Bubble sort");
+                    algorithmInfo.setCallable(Algorithms::bubbleSort);
+                    Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case BUBBLE_SORT_WITH_FLAG:
-                    inputInfo.setMessage("Bubble sort with flag");
-                    inputInfo.setCallable(Algorithms::bubbleSortWithFlag);
-                    Utils.showAlgorithmResult(inputInfo);
+                    algorithmInfo.setName("Bubble sort with flag");
+                    algorithmInfo.setCallable(Algorithms::bubbleSortWithFlag);
+                    Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case SHELL_SORT:
-                    inputInfo.setMessage("Shell sort");
-                    inputInfo.setCallable(Algorithms::shellSort);
-                    Utils.showAlgorithmResult(inputInfo);
+                    algorithmInfo.setName("Shell sort");
+                    algorithmInfo.setCallable(Algorithms::shellSort);
+                    Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case UNKNOWN:
                     System.out.println("Opção inválida. :(\n");
