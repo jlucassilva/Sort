@@ -1,5 +1,6 @@
-package com.hpedrorodrigues.sort.algorithm;
+package com.hpedrorodrigues.sort.app;
 
+import com.hpedrorodrigues.sort.algorithm.*;
 import com.hpedrorodrigues.sort.enumeration.SupportedAlgorithms;
 import com.hpedrorodrigues.sort.pojo.AlgorithmInfo;
 import com.hpedrorodrigues.sort.util.Utils;
@@ -36,27 +37,37 @@ public class Handler {
             switch (algorithm) {
                 case SELECTION_SORT:
                     algorithmInfo.setName("Selection sort");
-                algorithmInfo.setCallable(Algorithms::selectionSort);
+                algorithmInfo.setCallable(input -> new SelectionSort().sort(input));
                 Utils.showAlgorithmResult(algorithmInfo);
                 break;
                 case INSERTION_SORT:
                     algorithmInfo.setName("Insertion sort");
-                    algorithmInfo.setCallable(Algorithms::insertionSort);
+                    algorithmInfo.setCallable(input -> new InsertionSort().sort(input));
                     Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case BUBBLE_SORT:
                     algorithmInfo.setName("Bubble sort");
-                    algorithmInfo.setCallable(Algorithms::bubbleSort);
+                    algorithmInfo.setCallable(input -> new BubbleSort().sort(input));
                     Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case BUBBLE_SORT_WITH_FLAG:
                     algorithmInfo.setName("Bubble sort with flag");
-                    algorithmInfo.setCallable(Algorithms::bubbleSortWithFlag);
+                    algorithmInfo.setCallable(input -> new BubbleSortWithFlag().sort(input));
                     Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case SHELL_SORT:
                     algorithmInfo.setName("Shell sort");
-                    algorithmInfo.setCallable(Algorithms::shellSort);
+                    algorithmInfo.setCallable(input -> new ShellSort().sort(input));
+                    Utils.showAlgorithmResult(algorithmInfo);
+                    break;
+                case MERGE_SORT:
+                    algorithmInfo.setName("Merge sort");
+                    algorithmInfo.setCallable(input -> new MergeSort().sort(input));
+                    Utils.showAlgorithmResult(algorithmInfo);
+                    break;
+                case QUICK_SORT:
+                    algorithmInfo.setName("Quick sort");
+                    algorithmInfo.setCallable(input -> new QuickSort().sort(input));
                     Utils.showAlgorithmResult(algorithmInfo);
                     break;
                 case UNKNOWN:

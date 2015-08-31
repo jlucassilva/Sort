@@ -4,19 +4,19 @@ import com.hpedrorodrigues.sort.listener.Callable;
 
 public class AlgorithmInfo {
 
-    private String message;
+    private String name;
     private Callable<int[]> callable;
 
     private int[] randomArray;
     private int[] descArray;
     private int[] ascArray;
 
-    public String getMessage() {
-        return message;
+    public String getName() {
+        return name;
     }
 
-    public void setName(String message) {
-        this.message = message;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Callable<int[]> getCallable() {

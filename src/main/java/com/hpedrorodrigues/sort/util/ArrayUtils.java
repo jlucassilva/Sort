@@ -4,10 +4,10 @@ public class ArrayUtils {
 
     public static int[] copy(int array[]) {
         int size = array.length;
-        int copyArray[] = new int[size];
+        int copiedArray[] = new int[size];
         for (int i = 0; i < size; i++) {
-            copyArray[i] = array[i];
+            copiedArray[i] = array[i];
         }
-        return copyArray;
+        return copiedArray;
     }
 }

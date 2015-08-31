@@ -28,5 +28,5 @@ java -jar target/Sort-1.0-SNAPSHOT.jar
 ou 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.hpedrorodrigues.sort.algorithm.Runner"
+mvn exec:java -Dexec.mainClass="com.hpedrorodrigues.sort.app.Runner"
 ```

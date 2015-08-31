@@ -1,4 +1,4 @@
-package com.hpedrorodrigues.sort.algorithm;
+package com.hpedrorodrigues.sort.app;
 
 public class Runner {
 

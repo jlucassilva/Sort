@@ -1,12 +1,14 @@
 package com.hpedrorodrigues.sort.enumeration;
 
 public enum SupportedAlgorithms {
+    UNKNOWN(-1),
     SELECTION_SORT(1),
     INSERTION_SORT(2),
     BUBBLE_SORT(3),
     BUBBLE_SORT_WITH_FLAG(4),
     SHELL_SORT(5),
-    UNKNOWN(6);
+    MERGE_SORT(6),
+    QUICK_SORT(7);
 
     private int value;
 

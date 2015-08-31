@@ -32,11 +32,13 @@ public class Utils {
         System.out.println("3 -> Bubble Sort");
         System.out.println("4 -> Bubble Sort with flag");
         System.out.println("5 -> Shell Sort");
+        System.out.println("6 -> Merge Sort");
+        System.out.println("7 -> Quick Sort");
     }
 
     public static void showAlgorithmResult(AlgorithmInfo algorithmInfo) {
         System.out.println("------------------------------------------------");
-        System.out.println(algorithmInfo.getMessage() + "\n");
+        System.out.println(algorithmInfo.getName() + "\n");
         System.out.println("Entradas:");
         System.out.println("Array aleatório:");
         show(algorithmInfo.getRandomArray());

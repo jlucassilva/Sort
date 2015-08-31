@@ -40,7 +40,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.hpedrorodrigues.sort.algorithm.Runner</mainClass>
+              <mainClass>com.hpedrorodrigues.sort.app.Runner</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -51,7 +51,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
         <configuration>
-          <mainClass>com.hpedrorodrigues.sort.algorithm.Runner</mainClass>
+          <mainClass>com.hpedrorodrigues.sort.app.Runner</mainClass>
         </configuration>
       </plugin>
 
